@@ -55,9 +55,10 @@
   <Import Project="$(FSharpTargetsPath)" />
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
-    <Compile Include="Program.fs" />
     <None Include="App.config" />
     <Content Include="packages.config" />
+    <Compile Include="DataWorks.fs" />
+    <Compile Include="Program.fs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />
@@ -74,14 +75,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Delta.DataManager\Delta.DataManager.fsproj">
-      <Name>Delta.DataManager</Name>
-      <Project>{c2bc9d0c-4b41-4b99-b02c-ac8fec1ba492}</Project>
-      <Private>True</Private>
-    </ProjectReference>
     <ProjectReference Include="..\Delta.Data\Delta.Data.csproj">
       <Name>Delta.Data</Name>
-      <Project>{6be393be-06f1-423e-9181-f08fbe818352}</Project>
+      <Project>{aacbd1c5-1bed-42ae-949d-a99a49c4cc75}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Delta.Shared\Delta.Shared.csproj">
+      <Name>Delta.Shared</Name>
+      <Project>{32529987-7ff0-42df-9ace-5c4aea9a1763}</Project>
       <Private>True</Private>
     </ProjectReference>
   </ItemGroup>
