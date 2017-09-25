@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Delta", "Delta\Delta.fsproj", "{65EC2B85-8D09-4C48-927F-F77829CF2B53}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delta.Data", "Delta.Data\Delta.Data.csproj", "{6BE393BE-06F1-423E-9181-F08FBE818352}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Delta.DataManager", "Delta.DataManager\Delta.DataManager.fsproj", "{C2BC9D0C-4B41-4B99-B02C-AC8FEC1BA492}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{65EC2B85-8D09-4C48-927F-F77829CF2B53}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65EC2B85-8D09-4C48-927F-F77829CF2B53}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65EC2B85-8D09-4C48-927F-F77829CF2B53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BE393BE-06F1-423E-9181-F08FBE818352}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BE393BE-06F1-423E-9181-F08FBE818352}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BE393BE-06F1-423E-9181-F08FBE818352}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BE393BE-06F1-423E-9181-F08FBE818352}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2BC9D0C-4B41-4B99-B02C-AC8FEC1BA492}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2BC9D0C-4B41-4B99-B02C-AC8FEC1BA492}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2BC9D0C-4B41-4B99-B02C-AC8FEC1BA492}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2BC9D0C-4B41-4B99-B02C-AC8FEC1BA492}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
