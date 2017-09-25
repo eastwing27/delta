@@ -5,12 +5,11 @@ module Program =
     open Delta.Shared.Models
     open DataWorks
 
-    let johny = Character()
-
     [<EntryPoint>]
     let main argv = 
-        johny.Name <- "Johny";
-        data.Create(johny)
+        let teams = 
+            chars
+            |> Seq.groupBy (fun x -> x.Organisation)
 
         Console.Read() |> ignore
         0 // return an integer exit code
