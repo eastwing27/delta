@@ -1,15 +1,8 @@
-﻿namespace Delta
+﻿// Learn more about F# at http://fsharp.org
 
-module Program =
-    open System
-    open Delta.Shared.Models
-    open DataWorks
+open System
 
-    [<EntryPoint>]
-    let main argv = 
-        let teams = 
-            chars
-            |> Seq.groupBy (fun x -> x.Organisation)
-
-        Console.Read() |> ignore
-        0 // return an integer exit code
+[<EntryPoint>]
+let main argv =
+    printfn "Hello World from F#!"
+    0 // return an integer exit code
