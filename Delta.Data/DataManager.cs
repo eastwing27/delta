@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -63,20 +64,21 @@ namespace Delta.Data
             table.AddRange(Entities);
         }
 
-        public void Update<T>(T Entity) 
-            where T : class
-        {
-            var table = getTable<T>();
+        //public void Update<T>(T Entity) 
+        //    where T : class
+        //{
+        //    var table = getTable<T>();
 
-            _db.Entry(Entity).State = EntityState.Modified;
-        }
+        //    //_db.Entry(Entity).State = EntityState.Modified;
+        //    _db.UpdateRange
+        //}
 
-        public void UpdateRange<T>(IEnumerable<T> Range) 
-            where T : class
-        {
-            foreach (var item in Range)
-                _db.Entry(item).State = EntityState.Modified;
-        }
+        //public void UpdateRange<T>(IEnumerable<T> Range) 
+        //    where T : class
+        //{
+        //    foreach (var item in Range)
+        //        _db.Entry(item).State = EntityState.Modified;
+        //}
 
         public void Delete<T>(T Entity) where T : class
         {

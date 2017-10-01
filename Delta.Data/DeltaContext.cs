@@ -1,5 +1,5 @@
 ﻿using Delta.Shared.Models;
-using System.Data.Entity;
+using Microsoft.EntityFrameworkCore;
 
 namespace Delta.Data
 {
@@ -7,5 +7,10 @@ namespace Delta.Data
     {
         public DbSet<Character> Characters { get; set; }
         public DbSet<Organisation> Organisations { get; set; }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=deltadb;Trusted_Connection=True;");
+        }
     }
 }
