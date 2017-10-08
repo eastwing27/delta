@@ -1,9 +1,22 @@
-﻿// Learn more about F# at http://fsharp.org
-
-open System
+﻿open System
 open DataProvider
+open Delta.Shared.Models
 
 [<EntryPoint>]
 let main argv =
-    printfn "Hello World from F#!"
+    let fractions = 
+        [
+            "The Abcists" 
+            "Hellriders" 
+            "Drunkards" 
+        ]
+
+    let orgs =
+        fractions|> Seq.map (fun x -> 
+                                let o = Organisation()
+                                o.Name <- x
+                                o)
+
+    createRange(orgs)
+
     0 // return an integer exit code

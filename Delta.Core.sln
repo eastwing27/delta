@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.16
+VisualStudioVersion = 15.0.26730.15
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delta.Data", "Delta.Data\Delta.Data.csproj", "{214A9E83-96E8-46C6-A77E-FBBCC688871A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Delta.Data", "Delta.Data\Delta.Data.csproj", "{214A9E83-96E8-46C6-A77E-FBBCC688871A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Delta.Shared", "Delta.Shared\Delta.Shared.csproj", "{A2923E9C-8632-4981-8EAD-8F3618F041E4}"
 EndProject
 Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Delta", "Delta\Delta.fsproj", "{021566F1-5456-4DCC-85F9-A3D984B8EEF5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delta.Shared", "Delta.Shared\Delta.Shared.csproj", "{A2923E9C-8632-4981-8EAD-8F3618F041E4}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Delta.DataProvider", "Delta.DataProvider\Delta.DataProvider.fsproj", "{1280E26E-7D7D-43E1-B489-64F9BBB1C6A4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +21,18 @@ Global
 		{214A9E83-96E8-46C6-A77E-FBBCC688871A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{214A9E83-96E8-46C6-A77E-FBBCC688871A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{214A9E83-96E8-46C6-A77E-FBBCC688871A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{021566F1-5456-4DCC-85F9-A3D984B8EEF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{021566F1-5456-4DCC-85F9-A3D984B8EEF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{021566F1-5456-4DCC-85F9-A3D984B8EEF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{021566F1-5456-4DCC-85F9-A3D984B8EEF5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A2923E9C-8632-4981-8EAD-8F3618F041E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A2923E9C-8632-4981-8EAD-8F3618F041E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2923E9C-8632-4981-8EAD-8F3618F041E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2923E9C-8632-4981-8EAD-8F3618F041E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{021566F1-5456-4DCC-85F9-A3D984B8EEF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{021566F1-5456-4DCC-85F9-A3D984B8EEF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{021566F1-5456-4DCC-85F9-A3D984B8EEF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{021566F1-5456-4DCC-85F9-A3D984B8EEF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1280E26E-7D7D-43E1-B489-64F9BBB1C6A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1280E26E-7D7D-43E1-B489-64F9BBB1C6A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1280E26E-7D7D-43E1-B489-64F9BBB1C6A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1280E26E-7D7D-43E1-B489-64F9BBB1C6A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

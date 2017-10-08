@@ -1,9 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyName>Delta</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
@@ -11,12 +9,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Delta.DataProvider\Delta.DataProvider.fsproj" />
+    <ProjectReference Include="..\Delta.Data\Delta.Data.csproj" />
     <ProjectReference Include="..\Delta.Shared\Delta.Shared.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="Program.fs" />
+    <Compile Include="DataProvider.fs" />
   </ItemGroup>
 
 </Project>
