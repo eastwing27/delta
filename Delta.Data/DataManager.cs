@@ -93,5 +93,9 @@ namespace Delta.Data
             table.RemoveRange(Range);
         }
 
+        public void SaveChanges(){
+            _db.SaveChanges();
+        }
+
     }
 }

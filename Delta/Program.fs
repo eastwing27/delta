@@ -19,4 +19,7 @@ let main argv =
 
     createRange(orgs)
 
+    printf "Done!"
+    Console.ReadKey() |> ignore
+
     0 // return an integer exit code

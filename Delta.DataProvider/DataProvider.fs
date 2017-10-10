@@ -15,4 +15,5 @@ let create<'t when 't: not struct> (entity:'t) =
 
 let createRange<'t when 't: not struct> (set:seq<'t>) =
     set |> data.CreateRange
+    data.SaveChanges()
 
