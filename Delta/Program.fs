@@ -2,6 +2,15 @@
 open DataProvider
 open Delta.Shared.Models
 
+let rec react command =
+    if command = "exit" then
+        0
+    else
+        let line = Console.ReadLine().Split(" ")
+        
+
+    
+
 [<EntryPoint>]
 let main argv =
     let fractions = 
@@ -11,13 +20,8 @@ let main argv =
             "Drunkards" 
         ]
 
-    let orgs =
-        fractions|> Seq.map (fun x -> 
-                                let o = Organisation()
-                                o.Name <- x
-                                o)
+    
 
-    createRange(orgs)
 
     printf "Done!"
     Console.ReadKey() |> ignore
