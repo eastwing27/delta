@@ -25,3 +25,9 @@ let generateOrganisation name =
     let org = Organisation()
     org.Name <- name
     org
+
+let generateCharacter orgId name =
+    let c = Character()
+    c.Name <- name
+    c.OrganisationId <- orgId
+    c
