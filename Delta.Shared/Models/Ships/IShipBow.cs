@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace Delta.Shared.Models.Ships
 {
-    public interface IShipBow : ITraitable<Ship>
+    public interface IShipBow : IDetail, ITraitable<Ship>
     {
 
     }
