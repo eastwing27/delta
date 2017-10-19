@@ -10,21 +10,34 @@ namespace Delta.Shared.Models.Ships
         public Hull Hull {get;set;}
         public IShipBow Bow {get;set;}
         public IShipForage Forage {get;set;}
-        public IEnumerable <IDeck<IDeckSection>> Decks {get;set;}
+        private List <IDeck> decks {get; set;}
+        public IEnumerable<IDeck<IDeckSection>> Decks 
+            => (IEnumerable<IDeck<IDeckSection>>)decks;
 
         public bool IsValid => 
             Hull != null &&
             Bow != null &&
             Forage != null &&
-            Decks.Any() &&
-            Decks.Where (deck => deck is HigherDeck).Count() <= 1;
+            decks.Any() &&
+            decks.Where (deck => deck is HigherDeck).Count() <= 1;
 
-        public ShipClass (int Decks, int Length, bool HasHigherDeck = true)
+        public ShipClass (byte Decks, byte Length, bool HasHigherDeck = true)
         {
             if (Decks < 1)
                 throw new ArgumentException("At least one deck must be specified");
 
-            
+            this.decks = new List<IDeck>();
+
+            byte counterStart = 0;
+            if (HasHigherDeck)
+            {
+                Decks--;
+                counterStart++;
+                this.decks.Add(new HigherDeck(Length));
+            }
+
+            for (byte i = counterStart; i < Decks+counterStart; i++)
+                decks.Add(new Deck(Length, i));
         }
 
         public override string ToString() => Name;
@@ -36,7 +49,7 @@ namespace Delta.Shared.Models.Ships
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            return Decks.GetEnumerator();
+            return decks.GetEnumerator();
         }
     }
 }

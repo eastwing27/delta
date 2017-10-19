@@ -1,6 +1,7 @@
 ﻿open System
 open DataProvider
 open Delta.Shared.Models
+open Delta.Shared.Models.Ships
 
 let addOrg name =
     if fractions |> Seq.map (fun x -> x.Name) |> Seq.contains name then
@@ -47,6 +48,8 @@ let rec react command =
         | _ -> printf ""
         react line
 
+let barge =
+    ShipClass(1uy, 7uy)
 
 [<EntryPoint>]
 let main argv =

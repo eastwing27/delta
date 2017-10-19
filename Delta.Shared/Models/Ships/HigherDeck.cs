@@ -6,8 +6,13 @@ namespace Delta.Shared.Models.Ships
     {
         public byte Number => 0;
 
-        public byte Length {get; internal set;}
+        public byte Length => (byte)Sections.Length;
 
-        public IEnumerable<HigherDeckSection> Sections {get; internal set;}
+        public HigherDeckSection[] Sections {get; private set;}
+
+        public HigherDeck (byte Length)
+        {
+            Sections = new HigherDeckSection[Length];
+        }
     }
 }
