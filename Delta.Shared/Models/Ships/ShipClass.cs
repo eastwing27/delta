@@ -10,9 +10,11 @@ namespace Delta.Shared.Models.Ships
         public Hull Hull {get;set;}
         public IShipBow Bow {get;set;}
         public IShipForage Forage {get;set;}
-        private List <IDeck> decks {get; set;}
+        private IDeck[] decks {get; set;}
         public IEnumerable<IDeck<IDeckSection>> Decks 
             => (IEnumerable<IDeck<IDeckSection>>)decks;
+
+        public byte DecksCount => (byte)decks.Length;
 
         public bool IsValid => 
             Hull != null &&
@@ -21,23 +23,17 @@ namespace Delta.Shared.Models.Ships
             decks.Any() &&
             decks.Where (deck => deck is HigherDeck).Count() <= 1;
 
-        public ShipClass (byte Decks, byte Length, bool HasHigherDeck = true)
+        public ShipClass (string ClassName, string Description, byte Length, IEnumerable<IDeck> Decks, IShipBow Bow, IShipForage Forage)
         {
-            if (Decks < 1)
+            if (!Decks.Any())
                 throw new ArgumentException("At least one deck must be specified");
 
-            this.decks = new List<IDeck>();
+            this.decks = Decks.ToArray();
+            this.Bow = Bow;
+            this.Forage = Forage;
 
-            byte counterStart = 0;
-            if (HasHigherDeck)
-            {
-                Decks--;
-                counterStart++;
-                this.decks.Add(new HigherDeck(Length));
-            }
-
-            for (byte i = counterStart; i < Decks+counterStart; i++)
-                decks.Add(new Deck(Length, i));
+            this.Name = Name;
+            this.Description = Description;
         }
 
         public override string ToString() => Name;

@@ -48,8 +48,27 @@ let rec react command =
         | _ -> printf ""
         react line
 
+let bargeDeck = 
+    HigherDeck(
+        [|
+            HigherDeckPlace()
+            HigherDeckPlace()
+            HigherDeckPlace()
+            HigherDeckPlace()
+            HigherDeckPlace()
+            HigherDeckPlace()
+            HigherDeckPlace()
+        |]
+    )
 let barge =
-    ShipClass(1uy, 7uy)
+    ShipClass(
+        "Barge",
+        "Long floating platfrom with lot of place for cargo or weapon. It has no its own engine and must be transported by tow",
+        7uy,
+        bargeDeck |> Array.singleton,
+        IShipBow(),
+        IShipForage()
+    )
 
 [<EntryPoint>]
 let main argv =

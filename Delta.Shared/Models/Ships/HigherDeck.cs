@@ -10,9 +10,9 @@ namespace Delta.Shared.Models.Ships
 
         public HigherDeckSection[] Sections {get; private set;}
 
-        public HigherDeck (byte Length)
+        public HigherDeck (HigherDeckSection[] Sections)
         {
-            Sections = new HigherDeckSection[Length];
+            this.Sections = Sections;
         }
     }
 }
